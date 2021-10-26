@@ -2,6 +2,4 @@
 
 docker build -t test .
 
-docker kill test
-
-docker run -p 8081:80 test
+echo "Run it manually from the readme", still need to build it :)"
