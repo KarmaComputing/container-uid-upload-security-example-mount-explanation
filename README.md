@@ -1,11 +1,11 @@
 # docker apache php file write directory docker-compose
 
 
-Basic image php + apache
+Basic image php + apache + write to file, with error because uploads
+is owned by root. 
 
 ```
-docker build -t test .
-docker run -p 8081:80 test
+./build-and-run.sh
 ```
 
 visit http://127.0.0.1:8081
