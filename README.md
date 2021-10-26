@@ -20,7 +20,7 @@ Why is there for docker-compose.yml? It's the same settings as `docker run` just
 
 # Explanation
 
-- Decide to store uploaded filed outside the container in a folder on the host
+- Decide to store uploaded filed outside the container in a folder on the host, this should be a folder just for uplaods, nothing else (you might need to *add* an additional -v mount rule to your project if you don't already have a dedicated folder, outside of where your src code is (otherwise the mount may overwrite your code with an empty dir :) 
 - This creates a challange because ownership permissions are not in sync
   - To be exact, the user namespace (user id) of the process running 'in the container' is different
     from the host, so when the process tries to write to the files, the owner `id` is the host machine,
